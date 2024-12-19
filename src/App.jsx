@@ -3,7 +3,7 @@ import AboutMe from './components/AboutMe';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Project from './components/Project';
-import Footer from './components/Footer';
+import NavBar from './components/Navbar';
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <Experience />
       <Skills />
       <Project />
-      <Footer />
+      <NavBar />
     </div>
   );
 };
