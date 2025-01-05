@@ -8,7 +8,7 @@ import NavBar from './components/Navbar';
 
 const App = () => {
   return (
-    <div className="App bg-gray-700">
+    <div className="bg-custom-black">
       <Header />
       <AboutMe />
       <Experience />
@@ -19,4 +19,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;""
