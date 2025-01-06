@@ -8,11 +8,11 @@ import NavBar from './components/Navbar';
 
 const App = () => {
   return (
-    <div className="bg-custom-black">
+    <div className="bg-custom-black pt-12">
       <Header />
       <AboutMe />
-      <Experience />
       <Skills />
+      <Experience />
       <Project />
       <NavBar />
     </div>

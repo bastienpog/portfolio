@@ -6,7 +6,7 @@ const Header = () => {
       <h2 className="text-custom-white sm:text-xl">Hi, I'm</h2>
       <h1 className="text-2xl text-custom-white font-bold mb-2 sm:text-3xl">Bastien Pognon</h1>
       <h2 className="text-lg text-gray-500 mb-6 sm:text-2xl">Web developper</h2>
-      <User size={256} className="mb-6"></User>
+      <User size={256} className="mb-10"></User>
       <div className="flex space-x-4">
       <button className= "text-custom-green px-4 py-2 rounded-md border-solid border-4 border-custom-green hover:bg-custom-green  hover:text-custom-white sm:px-6 sm:py-3">
         Download my CV

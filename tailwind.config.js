@@ -9,7 +9,8 @@ export default {
       colors: {
         'custom-black': '#1f1f1f',
         'custom-white':'#f0f2f4',
-        'custom-green':'#004b23'
+        'custom-green':'#588157',
+        'custom-darkgreen':'#344e41'
       }
     },
   },
