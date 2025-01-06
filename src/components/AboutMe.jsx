@@ -6,12 +6,12 @@ const AboutMe = () => {
     <div className="text-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
 
-        <div className="mb-8 flex flex-col text-center">
+        <div className="mb-12 flex flex-col text-center">
           <p className="text-gray-400 mb-2">A propos de moi</p>
-          <h1 className="text-custom-green text-3xl font-bold mb-12">About Me</h1>
+          <h1 className="text-custom-green text-3xl font-bold">About Me</h1>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
               <img 

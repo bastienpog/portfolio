@@ -1,18 +1,116 @@
+import React, { useState } from 'react';
+import { ChevronRight } from 'lucide-react';
+
 const Experience = () => {
+  const [filter, setFilter] = useState('Pro');
+
+  const experiences = [
+    {
+      title: "Stage développement web, 2 eme année",
+      company: "SMSMode,",
+      location: "Distanciel",
+      date: "Janvier - Février 2025",
+      type: "Pro",
+      link: false
+    },
+    {
+      title: "Stage développement web, 1 ere année",
+      company: "Bugali",
+      location:'Paris, France',
+      date: "Mai - Juillet 2024",
+      type:'Pro',
+      link: false
+    },
+    {
+      title: "Technicien SAV",
+      company: "LightInDerm",
+      location:'Paris, France',
+      date: "2024 - 2025",
+      type: "Pro",
+      link: false
+    },
+    {
+      title: "Technicien Test",
+      company: "KickMaker / ",
+      subCompany: "Bugali",
+      location:'Paris, France',
+      date: "Août - Septembre 2023",
+      type: "Pro",
+      link: false
+    },
+    {
+      title: "Technicien Maintenance Informatique",
+      location:'Paris, France',
+      date: "Juillet - Aout 2023 / 2024",
+      type: "Pro",
+      link: false
+    },
+    {
+      title: "Bac +2 Développeur Web",
+      company: "L'Ecole Multimédia, Paris",
+      date: "2023 - 2025",
+      type: "Formations",
+      link: false
+    },
+    {
+      title: "Bac Spécialité Maths et NSI",
+      company: "Lycée Notre Dame, Boulogne Billancourt",
+      date: "2018 - 2021",
+      type: "Formations",
+      link: true
+    }
+  ];
+
+  const filteredExperiences = experiences.filter(exp => exp.type === filter);
+
   return (
-    <section className="py-8 px-6 sm:py-16 sm:px-6 sm:max-w-5xl sm:mx-auto">
-      <h2 className="text-2xl text-center font-bold mb-4 sm:text-3xl sm:mb-6">My Experience</h2>
-      <div className="sm:flex">
-        <div className="sm:w-1/2 sm:pr-8">
-          <h3 className="text-xl font-bold mb-2 sm:text-2xl sm:mb-4">Education</h3>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div className="text-gray-100 p-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-12 text-center">
+          <p className="text-gray-400 mb-2">Mon parcours</p>
+          <h2 className="text-custom-green text-3xl font-bold mb-8">My career</h2>
+
+          <div className="flex justify-between mb-8">
+            <button
+              onClick={() => setFilter('Pro')}
+              className={`px-4 py-2 rounded-lg border border-custom-green ${
+                filter === 'Pro' ? 'bg-custom-green' : 'bg-transparent'
+              } transition-colors`}
+            >
+              Pro
+            </button>
+            <button
+              onClick={() => setFilter('Formations')}
+              className={`px-4 py-2 rounded-lg border border-custom-green ${
+                filter === 'Formations' ? 'bg-custom-green' : 'bg-transparent'
+              } transition-colors`}
+            >
+              Formations
+            </button>
+          </div>
         </div>
-        <div className="sm:w-1/2 sm:pl-8">
-          <h3 className="text-xl font-bold mb-2 sm:text-2xl sm:mb-4">Work Experience</h3>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div className="grid md:grid-cols-3 gap-16 mx-6">
+          {filteredExperiences.map((experience, index) => (
+            <div key={index} className="bg-custom-darkgreen rounded-xl p-6 flex flex-col">
+              <h3 className="text-white font-medium text-lg mb-2">
+                {experience.title}
+              </h3>
+              <div className="text-gray-400 text-sm mb-4">
+                {experience.company} {experience.subCompany}
+                {experience.location && <div>{experience.location}</div>}
+                {experience.date && <div>{experience.date}</div>}
+              </div>
+              {experience.link && (
+                <button className="text-custom-green text-sm mt-auto flex items-center gap-1">
+                  Voir plus <ChevronRight className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
