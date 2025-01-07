@@ -15,7 +15,8 @@ const AboutMe = () => {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
               <img 
-                className="w-full h-full object-cover filter grayscale"
+                className="w-full h-full object-cover"
+                src='/rb_1351.png' 
               />
             </div>
           </div>
@@ -37,16 +38,16 @@ const AboutMe = () => {
             </div>
             <div className="space-y-4">
               <p className="text-gray-300">
-                A 26 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web.
+              À 21 ans, je suis actuellement en deuxième année de bachelor en développement web à l'École Multimedia à Paris,
               </p>
               <p className="text-gray-300">
-                Suite à un bac +2 développeur web à la Digital School de Brest, j'ai pu acquérir les bases de plusieurs langages web (HTML, CSS, Javascript, PHP), la gestion de bases de données mais aussi l'utilisation de logiciels tels que Illustrator, Blender ou Figma que j'utilise régulièrement pour créer des maquettes interactives.
+              Durant mes études, j'ai acquis une solide maîtrise des langages web tels que HTML, CSS, JavaScript, React et PHP. J'ai également développé des compétences techniques en gestion de bases de données et en intégration de solutions web.
               </p>
               <p className="text-gray-300">
-                J'ai ensuite pu exercer et améliorer ces connaissances avec un stage de 3 mois aux côtés d'un développeur web expérimenté.
+              En parallèle de ma formation, j'ai eu la chance d'effectuer deux stages, ainsi que plusieurs missions en tant que technicien test ou sav, ce qui m'a permis d'appliquer mes connaissances dans des environnements professionnels réels et de renforcer mon expertise.
               </p>
               <p className="text-gray-300">
-                J'aimerais maintenant continuer ma formation avec une troisième année en bachelor « Développement web » en alternance toujours à la Digital School.
+              Aujourd'hui, je souhaite poursuivre mon parcours en continuant en troisième année de bachelor en alternance, toujours à l'École Multimedia. Cela me permettrait de combiner théorie et pratique tout en continuant à me perfectionner dans le domaine du développement web.
               </p>
             </div>
 

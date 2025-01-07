@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
+import DetailModal from './DetailModal';
 
 const Experience = () => {
   const [filter, setFilter] = useState('Pro');
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const experiences = [
     {
       title: "Stage développement web, 2 eme année",
-      company: "SMSMode,",
+      company: "SMSMode",
       location: "Distanciel",
       date: "Janvier - Février 2025",
       type: "Pro",
-      link: false
+      link: true,
+      details: [
+      ]
     },
     {
       title: "Stage développement web, 1 ere année",
@@ -19,7 +23,9 @@ const Experience = () => {
       location:'Paris, France',
       date: "Mai - Juillet 2024",
       type:'Pro',
-      link: false
+      link: true,
+      details: [
+      ]
     },
     {
       title: "Technicien SAV",
@@ -27,7 +33,9 @@ const Experience = () => {
       location:'Paris, France',
       date: "2024 - 2025",
       type: "Pro",
-      link: false
+      link: true,
+      details: [
+      ]
     },
     {
       title: "Technicien Test",
@@ -36,14 +44,18 @@ const Experience = () => {
       location:'Paris, France',
       date: "Août - Septembre 2023",
       type: "Pro",
-      link: false
+      link: true,
+      details: [
+      ]
     },
     {
       title: "Technicien Maintenance Informatique",
       location:'Paris, France',
       date: "Juillet - Aout 2023 / 2024",
       type: "Pro",
-      link: false
+      link: true,
+      details: [
+      ]
     },
     {
       title: "Bac +2 Développeur Web",
@@ -57,7 +69,7 @@ const Experience = () => {
       company: "Lycée Notre Dame, Boulogne Billancourt",
       date: "2018 - 2021",
       type: "Formations",
-      link: true
+      link: false
     }
   ];
 
@@ -97,15 +109,23 @@ const Experience = () => {
                 {experience.title}
               </h3>
               <div className="text-gray-400 text-sm mb-4">
-                {experience.company} {experience.subCompany}
-                {experience.location && <div>{experience.location}</div>}
-                {experience.date && <div>{experience.date}</div>}
+                {experience.company} {experience.subCompany} - {experience.location}
+                {experience.date && <div className='mt-2'>{experience.date}</div>}
               </div>
               {experience.link && (
-                <button className="text-custom-green text-sm mt-auto flex items-center gap-1">
+                <button  onClick={() => setSelectedItem(experience)} className="text-custom-green text-sm mt-auto flex items-center gap-1">
                   Voir plus <ChevronRight className="w-4 h-4" />
                 </button>
               )}
+                <DetailModal
+                isOpen={!!selectedItem}
+                onClose={() => setSelectedItem(null)}
+                title={selectedItem?.title}
+                company={selectedItem?.company}
+                location={selectedItem?.location}
+                date={selectedItem?.date}
+                details={selectedItem?.details}
+                />
             </div>
           ))}
         </div>
