@@ -1,5 +1,4 @@
-
-import { Home, User,BookOpenTextIcon,Briefcase,FolderGit2} from 'lucide-react';
+import { BookOpenTextIcon, Briefcase, FolderGit2, Home, User } from "lucide-react";
 
 const NavBar = () => {
   return (

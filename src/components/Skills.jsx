@@ -1,33 +1,20 @@
-import React from 'react';
-import { 
-  Code2, 
-  Palette, 
-  FileJson, 
-  Boxes,
-  Database,
-  Server,
-  Globe,
-  Wind,
-  Flame,
-  Laptop,
-  MonitorSmartphone,
-  Cpu
-} from 'lucide-react';
+import { Boxes, Code2, Database, FileJson, Flame, Globe, Palette, Server, Wind } from "lucide-react";
+import React from "react";
 
 const SkillsSection = () => {
   const frontendSkills = [
-    { name: 'HTML', icon: <Globe className="w-6 h-6 text-custom-green" /> },
-    { name: 'CSS', icon: <Palette className="w-6 h-6 text-custom-green" /> },
-    { name: 'JavaScript', icon: <FileJson className="w-6 h-6 text-custom-green" /> },
-    { name: 'React', icon: <Boxes className="w-6 h-6 text-custom-green" /> },
-    { name: 'TypeScript', icon: <Code2 className="w-6 h-6 text-custom-green" /> },
-    { name: 'Tailwind', icon: <Wind className="w-6 h-6 text-custom-green" /> },
+    { name: "HTML", icon: <Globe className="w-6 h-6 text-custom-green" /> },
+    { name: "CSS", icon: <Palette className="w-6 h-6 text-custom-green" /> },
+    { name: "JavaScript", icon: <FileJson className="w-6 h-6 text-custom-green" /> },
+    { name: "React", icon: <Boxes className="w-6 h-6 text-custom-green" /> },
+    { name: "TypeScript", icon: <Code2 className="w-6 h-6 text-custom-green" /> },
+    { name: "Tailwind", icon: <Wind className="w-6 h-6 text-custom-green" /> },
   ];
 
   const backendSkills = [
-    { name: 'Node.js', icon: <Server className="w-6 h-6 text-custom-green" /> },
-    { name: 'PHP', icon: <Flame className="w-6 h-6 text-custom-green" /> },
-    { name: 'MySQL', icon: <Database className="w-6 h-6 text-custom-green" /> },
+    { name: "Node.js", icon: <Server className="w-6 h-6 text-custom-green" /> },
+    { name: "PHP", icon: <Flame className="w-6 h-6 text-custom-green" /> },
+    { name: "MySQL", icon: <Database className="w-6 h-6 text-custom-green" /> },
   ];
 
   const SkillCard = ({ title, skills }) => (

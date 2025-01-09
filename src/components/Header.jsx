@@ -8,12 +8,10 @@ const Header = () => {
       <h2 className="text-lg text-gray-500 mb-6 sm:text-2xl">Web developper</h2>
       <User size={256} className="mb-10"></User>
       <div className="flex space-x-4">
-      <button className= "text-custom-green px-4 py-2 rounded-md border-solid border-4 border-custom-green hover:bg-custom-green  hover:text-custom-white sm:px-6 sm:py-3">
-        Download my CV
-      </button>
-      <button className="bg-custom-green text-white px-4 py-2 rounded-md sm:px-6 sm:py-3">
-        About Me
-      </button>
+        <button className="text-custom-green px-4 py-2 rounded-md border-solid border-4 border-custom-green hover:bg-custom-green  hover:text-custom-white sm:px-6 sm:py-3">
+          Download my CV
+        </button>
+        <button className="bg-custom-green text-white px-4 py-2 rounded-md sm:px-6 sm:py-3">About Me</button>
       </div>
     </header>
   );

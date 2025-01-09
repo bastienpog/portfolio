@@ -1,29 +1,20 @@
-import React, { useEffect } from 'react';
-import { X, Check } from 'lucide-react';
+import { Check, X } from "lucide-react";
+import React, { useEffect } from "react";
 
-const DetailModal = ({ 
-  isOpen, 
-  onClose, 
-  title, 
-  company, 
-  location, 
-  date, 
-  details 
-}) => {
-
+const DetailModal = ({ isOpen, onClose, title, company, location, date, details }) => {
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
@@ -31,21 +22,12 @@ const DetailModal = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div 
-        className="fixed inset-0 bg-black bg-opacity-30"
-        onClick={onClose}
-      />
-      
+      <div className="fixed inset-0 bg-black bg-opacity-30" onClick={onClose} />
 
       <div className="relative z-50 bg-custom-darkgreen rounded-xl max-w-md w-full mx-4 p-6">
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-custom-green text-xl font-medium">
-            {title}
-          </h3>
-          <button 
-            onClick={onClose}
-            className="text-gray-400 hover:text-white"
-          >
+          <h3 className="text-custom-green text-xl font-medium">{title}</h3>
+          <button onClick={onClose} className="text-gray-400 hover:text-white">
             <X className="w-4 h-4" />
           </button>
         </div>

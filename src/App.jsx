@@ -1,14 +1,13 @@
-import Header from './components/Header';
-import AboutMe from './components/AboutMe';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Project from './components/Project';
-import NavBar from './components/Navbar';
-
+import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import Header from "./components/Header";
+import NavBar from "./components/Navbar";
+import Project from "./components/Project";
+import Skills from "./components/Skills";
 
 const App = () => {
   return (
-    <div className="bg-custom-black pt-12">
+    <div className="bg-custom-black py-12">
       <Header />
       <AboutMe />
       <Skills />
@@ -19,4 +18,5 @@ const App = () => {
   );
 };
 
-export default App;""
+export default App;
+("");
