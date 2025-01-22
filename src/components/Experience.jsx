@@ -23,7 +23,7 @@ const Experience = () => {
       date: "Mai - Juillet 2024",
       type: "Pro",
       link: true,
-      details: [],
+      details: ["Réalisation d'un outil de visualisation de données", "Javascript / Jquery", "D3.js", "SQL"],
     },
     {
       title: "Technicien SAV",
@@ -32,7 +32,11 @@ const Experience = () => {
       date: "2024 - 2025",
       type: "Pro",
       link: true,
-      details: ["skljfjslkfjsl"],
+      details: [
+        "Diagnostic, planification, réparations",
+        "Maintenance préventive et curative sur équipements selon priorité/délais",
+        "Suivi dossiers techniques / administratifs selon process qualité SAV",
+      ],
     },
     {
       title: "Technicien Test",
@@ -42,7 +46,12 @@ const Experience = () => {
       date: "Août - Septembre 2023",
       type: "Pro",
       link: true,
-      details: [],
+      details: [
+        "Lecture plan de qualification",
+        "Réalisation d'essais.",
+        "Consignation des données et rédaction de rapport d'essais.",
+        "Recherche de bugs et de dysfonctionnements.",
+      ],
     },
     {
       title: "Technicien Maintenance Informatique",
@@ -50,7 +59,7 @@ const Experience = () => {
       date: "Juillet - Aout 2023 / 2024",
       type: "Pro",
       link: true,
-      details: [],
+      details: ["Montage des postes informatiques sur mobilier.", "Déploiement de l'OS."],
     },
     {
       title: "Bac +2 Développeur Web",

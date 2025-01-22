@@ -7,7 +7,7 @@ const Project = () => {
 
   const projects = [
     {
-      title: "",
+      title: "Checklist App",
       image: "https://placeholder.pagebee.io/api/random/300/200",
     },
     {
@@ -39,7 +39,7 @@ const Project = () => {
           <p className="text-gray-400 mb-2">Mes projets</p>
           <h2 className="text-custom-green text-3xl font-bold">My projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
           {projects.map((project, index) => (
             <div className=" bg-custom-darkgreen rounded-lg p-4 transition-transform hover:scale-105">
               <div className="aspect-video w-full overflow-hidden rounded-lg mb-3">
@@ -55,9 +55,6 @@ const Project = () => {
                 isOpen={!!selectedItem}
                 onClose={() => setSelectedItem(null)}
                 title={selectedItem?.title}
-                company={selectedItem?.company}
-                location={selectedItem?.location}
-                date={selectedItem?.date}
                 details={selectedItem?.details}
               />
             </div>
