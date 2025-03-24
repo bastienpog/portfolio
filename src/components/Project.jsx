@@ -9,23 +9,24 @@ const Project = () => {
     {
       title: "Sms-assistant",
       image: "image3.png",
-      details:[
-        "Projet de stage de 2e année / Chatbot par sms utilisant les technologies SMS-Mode","React / Vite", "Tailwind", "Ollama", "Node.js"," API SMS-Mode"
-      ]
+      details: [
+        "Projet de stage de 2e année / Chatbot par sms utilisant les technologies SMS-Mode",
+        "React / Vite",
+        "Tailwind",
+        "Ollama",
+        "Node.js",
+        "API SMS-Mode",
+      ],
     },
     {
       title: "Checklist App",
       image: "image1.png",
-      details:[
-        "Projet scolaire / Premier projet React","React / Vite", "Tailwind", "Axios"
-      ]
+      details: ["Projet scolaire / Premier projet React", "React / Vite", "Tailwind", "Axios"],
     },
     {
       title: "Outil de Visualisation de donnée",
       image: "image.png",
-      details:[
-       "Projet de stage de 1ere année" ,"JS / Jquery", "D3.js", "Prisma"
-      ]
+      details: ["Projet de stage de 1ere année", "JS / Jquery", "D3.js", "Prisma"],
     },
   ];
 
@@ -37,9 +38,8 @@ const Project = () => {
           <h2 className="text-custom-green text-3xl font-bold">My projects</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
-          
-          {projects.map((project,index) => (
-            <div key={index} className=" bg-custom-darkgreen rounded-lg p-4 transition-transform hover:scale-105">
+          {projects.map((project, index) => (
+            <div key={index} className="bg-custom-darkgreen rounded-lg p-4 transition-transform hover:scale-105">
               <div className="aspect-video w-full overflow-hidden rounded-lg mb-3">
                 <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
               </div>
@@ -49,17 +49,16 @@ const Project = () => {
                   Voir plus <ChevronRight className="w-4 h-4" />
                 </button>
               </div>
-              <DetailModal
-                isOpen={!!selectedItem}
-                onClose={() => setSelectedItem(null)}
-                title={selectedItem?.title}
-                details={selectedItem?.details}
-              />
             </div>
           ))}
         </div>
       </div>
+
+      {/* SINGLE INSTANCE OF DetailModal */}
+      <DetailModal isOpen={!!selectedItem} onClose={() => setSelectedItem(null)} title={selectedItem?.title} details={selectedItem?.details} />
     </div>
   );
 };
+
 export default Project;
+
