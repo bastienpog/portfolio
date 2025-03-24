@@ -8,24 +8,23 @@ const Project = () => {
   const projects = [
     {
       title: "Sms-assistant",
-      image: "public/Capture d’écran du 2025-03-07 11-22-03.png",
+      image: "image3.png",
       details:[
-        ""
+        "Projet de stage de 2e année / Chatbot par sms utilisant les technologies SMS-Mode","React / Vite", "Tailwind", "Ollama", "Node.js"," API SMS-Mode"
       ]
     },
     {
       title: "Checklist App",
-      image: "/public/image1.png",
+      image: "image1.png",
+      details:[
+        "Projet scolaire / Premier projet React","React / Vite", "Tailwind", "Axios"
+      ]
     },
     {
       title: "Outil de Visualisation de donnée",
-      image: "/public/image.png",
-    },
-    {
-      title: "Snippet Manager",
-      image: "/public/image2.png",
+      image: "image.png",
       details:[
-        ""
+       "Projet de stage de 1ere année" ,"JS / Jquery", "D3.js", "Prisma"
       ]
     },
   ];
