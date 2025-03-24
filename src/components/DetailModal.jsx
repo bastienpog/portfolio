@@ -1,5 +1,5 @@
 import { Check, X } from "lucide-react";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const DetailModal = ({ isOpen, onClose, title, company, location, date, details }) => {
   useEffect(() => {
@@ -27,24 +27,22 @@ const DetailModal = ({ isOpen, onClose, title, company, location, date, details 
       <div className="relative z-50 bg-custom-darkgreen rounded-xl max-w-md w-full mx-4 p-6">
         <div className="flex justify-between items-start mb-4">
           <h3 className="text-custom-green text-xl font-medium">{title}</h3>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+          <button onClick={onClose} className="text-gray-200 hover:text-white">
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Subheader */}
-        <div className="text-sm text-gray-400 mb-6">
+        <div className="text-sm text-gray-200 mb-6">
           {company}
-          {location && <span>, {location}</span>}
+          {location && <span> {location}</span>}
           {date && <div>{date}</div>}
         </div>
 
-        {/* Content */}
         <div className="space-y-3">
           {details?.map((detail, index) => (
             <div key={index} className="flex items-start gap-3">
               <Check className="w-4 h-4 text-custom-green mt-1 flex-shrink-0" />
-              <span className="text-gray-300">{detail}</span>
+              <span className="text-custom-white">{detail}</span>
             </div>
           ))}
         </div>

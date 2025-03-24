@@ -1,5 +1,4 @@
 import { Boxes, Code2, Database, FileJson, Flame, Globe, Palette, Server, Wind } from "lucide-react";
-import React from "react";
 
 const SkillsSection = () => {
   const frontendSkills = [
@@ -32,7 +31,7 @@ const SkillsSection = () => {
   );
 
   return (
-    <div className="text-gray-100 p-8">
+    <div id="Skills" className="text-gray-100 p-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 text-center">
           <p className="text-gray-400 mb-2">Mes compétences</p>

@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 
 const App = () => {
   return (
-    <div className="bg-custom-black py-12">
+    <div className="bg-custom-white py-12 scroll-smooth">
       <Header />
       <AboutMe />
       <Skills />
@@ -19,4 +19,3 @@ const App = () => {
 };
 
 export default App;
-("");
